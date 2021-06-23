@@ -1,5 +1,8 @@
 class ContacsController < ApplicationController
   before_action :set_contac, only: %i[ show edit update destroy ]
+  def top
+    @contacs = Contac.all
+  end
 
   # GET /contacs or /contacs.json
   def index
